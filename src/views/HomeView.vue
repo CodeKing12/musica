@@ -1,9 +1,9 @@
 <template>
   <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal">
     <SideBar />
-    <div class="ml-1 w-full mr-14">
+    <div class="ml-28 max-w-full pr-14 relative" id="main-content">
       <NavBar />
-      <section class="mt-6 flex gap-6">
+      <section class="mt-[101px] flex gap-6">
         <div class="bg-[#609EAF] text-white w-4/6 rounded-[40px] flex justify-between relative overflow-hidden">
           <div class="py-10 px-10">
             <p class="mb-20 font-bold text-base">Curated Playlist</p>
@@ -36,10 +36,28 @@
           <HorizontalSlider />
         </div>
       </section>
-			<section class="mt-11">
-				<h2 class="font-bold text-2xl mb-[14px]">New Releases</h2>
+			<section class="mt-12">
+				<h2 class="font-bold text-2xl mb-4">New Releases</h2>
+				<MusicSlider />
+			</section>
+			<section class="mt-[60px] pb-10">
+				<h2 class="font-bold text-2xl mb-4">Popular in your Area</h2>
+				<MusicSlider />
 			</section>
     </div>
+		<div class="player py-5 px-28 fixed bottom-0 w-full z-50 flex">
+      <div class="flex">
+        <img class="cover-art w-[50px] h-[50px] rounded-[14px]" src="@/assets/images/music-2.svg" />
+        <div class="text-white ml-[13px] font-bold flex flex-col justify-center">
+          <a class="cursor-pointer text-sm mb-1">Seasons In</a>
+          <a class="cursor-pointer text-xs text-white text-opacity-[0.44]">James</a>
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+		</div>
   </div>
 </template>
 
@@ -48,6 +66,15 @@
   import NavBar from '@/components/NavBar.vue';
   import SideBar from '@/components/SideBar.vue';
   import HorizontalSlider from "@/components/HorizontalSlider.vue"
+	import MusicSlider from "@/components/MusicSlider.vue"
+	import { onMounted } from "vue";
+
+	onMounted(() => {
+			let main = document.getElementById("main-content")
+			let sidebar = document.getElementById("sidebar")
+			main.style.width = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
+			main.style.maxWidth = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
+	})
 </script>
 
 <style scoped>
@@ -55,4 +82,15 @@
 		background-position: right top;
 		background-size: cover;
 	} */
+
+	.player {
+    background-color: rgba(16, 16, 16, 0.51);
+		backdrop-filter: blur(12px);
+		box-shadow: 0px -25px 100px rgba(16, 16, 16, 0.51);
+
+	}
+
+	.cover-art {
+		box-shadow: 0px 15px 17px -10px rgba(0, 0, 0, 0.61);
+	}
 </style>
