@@ -6,6 +6,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        "brand-yellow": "#FACD66",
+        "brand-black": "#1A1E1F",
+      },
       fontFamily: {
         quicksand: ['Quicksand', 'sans-serif']
       }
