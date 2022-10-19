@@ -45,19 +45,7 @@
 				<MusicSlider />
 			</section>
     </div>
-		<div class="player py-5 px-28 fixed bottom-0 w-full z-50 flex">
-      <div class="flex">
-        <img class="cover-art w-[50px] h-[50px] rounded-[14px]" src="@/assets/images/music-2.svg" />
-        <div class="text-white ml-[13px] font-bold flex flex-col justify-center">
-          <a class="cursor-pointer text-sm mb-1">Seasons In</a>
-          <a class="cursor-pointer text-xs text-white text-opacity-[0.44]">James</a>
-        </div>
-      </div>
-
-      <div>
-
-      </div>
-		</div>
+		<MusicPlayer />
   </div>
 </template>
 
@@ -68,6 +56,7 @@
   import HorizontalSlider from "@/components/HorizontalSlider.vue"
 	import MusicSlider from "@/components/MusicSlider.vue"
 	import { onMounted } from "vue";
+  import MusicPlayer from '@/components/MusicPlayer.vue';
 
 	onMounted(() => {
 			let main = document.getElementById("main-content")
@@ -82,15 +71,4 @@
 		background-position: right top;
 		background-size: cover;
 	} */
-
-	.player {
-    background-color: rgba(16, 16, 16, 0.51);
-		backdrop-filter: blur(12px);
-		box-shadow: 0px -25px 100px rgba(16, 16, 16, 0.51);
-
-	}
-
-	.cover-art {
-		box-shadow: 0px 15px 17px -10px rgba(0, 0, 0, 0.61);
-	}
 </style>
