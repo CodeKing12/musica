@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ChartView from '../views/ChartView.vue'
 import CollectionsView from '../views/CollectionsView.vue'
 
 const routes = [
@@ -11,6 +12,11 @@ const routes = [
   {
     path: '/genres',
     name: 'genres',
+    component: ChartView
+  },
+  {
+    path: '/collections',
+    name: 'collections',
     component: CollectionsView
   }
   // {
