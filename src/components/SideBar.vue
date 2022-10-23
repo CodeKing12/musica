@@ -17,7 +17,15 @@
 </template>
 
 <script setup>
-    // import { ref } from "vue";
+    import { defineProps, onMounted } from "vue";
+
+    const props = defineProps({
+        active: String
+    })
+
+    onMounted(() => {
+        document.getElementById(props.active).classList.add("active-nav")
+    })
 
     // let hovered = ref(false)
 </script>
