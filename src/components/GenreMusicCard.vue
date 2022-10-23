@@ -1,7 +1,12 @@
 <template>
     <div class="w-full px-3 py-2 bg-[rgb(51,55,59)] bg-opacity-[0.37] rounded-2xl flex gap-20 items-center group hover:bg-opacity-[0.65] cursor-pointer duration-300 ease-in-out hover:-translate-y-[3px]">
         <div class="flex gap-6 items-center w-[10%]">
-            <img class="w-12 h-12" src="@/assets/images/album-cover-5.svg" />
+            <div class="relative w-12 h-12 rounded-lg">
+                <img class="w-full h-full rounded-lg" src="@/assets/images/album-cover-5.svg" />
+                <span class="opacity-0 duration-[250ms] ease-linear group-hover:opacity-100 absolute top-0 rounded-lg w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
+                    <svg class="fill-[#d2d2c2]" width="22" height="22" viewBox="0 0 9 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.333344 4.77262V2.9536C0.333344 0.619203 1.98563 -0.335721 4.0017 0.831476L5.57814 1.74094L7.15463 2.65041C9.17069 3.81761 9.17069 5.72764 7.15463 6.89484L5.57814 7.80431L4.0017 8.71377C1.98563 9.88097 0.333344 8.92605 0.333344 6.59165V4.77262Z"/></svg>
+                </span>
+            </div>
             <svg class="heart fill-transparent hover:fill-[#E5524A] cursor-pointer transition-all duration-200 ease-linear" width="25" height="25" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.43496 10.3718C1.54079 7.58016 2.58662 4.10933 5.51746 3.16599C7.05912 2.66849 8.96162 3.08349 10.0425 4.57433C11.0616 3.02849 13.0191 2.67183 14.5591 3.16599C17.4891 4.10933 18.5408 7.58016 17.6475 10.3718C16.2558 14.7968 11.4 17.1018 10.0425 17.1018C8.68579 17.1018 3.87329 14.8485 2.43496 10.3718Z" stroke="#EFEEE0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.1572 6.30328C14.163 6.40662 14.7922 7.20412 14.7547 8.32162" stroke="#EFEEE0" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </div>
         <p class="text-white w-[30%] font-semibold text-ellipsis cursor-pointer">Let me love you ~ <span class="text-[#bdbdb7]">Krisx</span></p>
