@@ -1,6 +1,6 @@
 <template>
   <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal">
-    <SideBar />
+    <SideBar :active="'home'" />
     <div class="ml-28 max-w-full pr-14 relative" id="main-content">
       <NavBar />
       <section>
