@@ -58,6 +58,6 @@
 
 <style scoped>
     .category-page {
-      background: linear-gradient(180deg, rgba(29, 33, 35, 0.8) 0%, #1D2123 61.48%), url(@/assets/images/music-1.svg) no-repeat cover;
+      background: linear-gradient(180deg, rgba(29, 33, 35, 0.8) 0%, #1D2123 61.48%), url(@/assets/images/profile-1.jpg) no-repeat cover;
     }
 </style>
