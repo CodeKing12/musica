@@ -68,6 +68,10 @@
 			let sidebar = document.getElementById("sidebar")
 			main.style.width = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
 			main.style.maxWidth = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
+
+      let playerHeight = document.getElementById("music-player").offsetHeight;
+      // console.log(playerHeight)
+      main.style.marginBottom = playerHeight/2 + "px"
 	})
 
   // let show = ref(false)

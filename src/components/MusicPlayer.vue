@@ -1,5 +1,5 @@
 <template>
-    <div class="player pt-5 pb-3 px-20 fixed bottom-0 w-full z-50 flex justify-between">
+    <div id="music-player" class="player pt-5 pb-3 px-20 fixed bottom-0 w-full z-50 flex justify-between">
       <div class="flex items-center">
         <img class="cover-art w-[50px] h-[50px] rounded-[14px]" src="@/assets/images/music-2.svg" />
         <div class="text-white ml-[13px] font-bold flex flex-col justify-center">
