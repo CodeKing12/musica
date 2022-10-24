@@ -1,9 +1,9 @@
 <template>
     <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal category-page">
-      <SideBar />
-      <div class="ml-32 max-w-full pr-14 relative" id="main-content">
+      <SideBar :active="'collections'" />
+      <div class="ml-32 w-full max-w-full pr-14 relative" id="main-content">
         <NavBar />
-        <section>
+        <section class="w-full">
           <section class="mt-[90px] flex gap-6 relative mb-12 w-full">
             <img class="w-[290px] h-[290px] rounded-2xl" src="@/assets/images/genre-img.png" />
             <div class="self-end font-quicksand">

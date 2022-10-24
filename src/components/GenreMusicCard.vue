@@ -27,7 +27,7 @@
                         <vs-dropdown-item>
                             Remove
                         </vs-dropdown-item>
-                        <divider class="my-1 block h-[0.5px] bg-white bg-opacity-40" />
+                        <span class="my-1 block h-[0.5px] bg-white bg-opacity-40"></span>
                         <vs-dropdown-item>
                             Add to Playlist
                         </vs-dropdown-item>
@@ -67,7 +67,7 @@
 
 <style>
     .vs-dropdown--menu--after {
-        background-color: #393d3f !important;
+        background-color: #FACD66 !important;
     }
 
     .vs-dropdown-menu.notHeight .vs-dropdown--menu--after {
