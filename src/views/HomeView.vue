@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal">
+  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal cover-animate">
     <SideBar :active="'home'" />
     <div class="ml-28 max-w-full pr-14 relative" id="main-content">
       <NavBar />
@@ -79,6 +79,8 @@
   // function showCategory() {
   //   show = true
   // }
+
+  // Add arrows to your music sliders.
 </script>
 
 <style scoped>
