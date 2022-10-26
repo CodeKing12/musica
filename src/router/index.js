@@ -7,17 +7,29 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: HomeView,
+    meta: {
+      enterClass: "cover-right-enter",
+      leaveClass: "cover-right-leave"
+    }
   },
   {
     path: '/genres',
     name: 'genres',
-    component: ChartView
+    component: ChartView,
+    meta: {
+      enterClass: "cover-up-enter",
+      leaveClass: "cover-up-leave"
+    }
   },
   {
     path: '/collections',
     name: 'collections',
-    component: CollectionsView
+    component: CollectionsView,
+    meta: {
+      enterClass: "cover-down-enter",
+      leaveClass: "cover-down-leave"
+    }
   }
   // {
   //   path: '/about',

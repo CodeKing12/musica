@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal cover-animate">
-    <SideBar :active="'home'" />
-    <div class="ml-28 max-w-full pr-14 relative" id="main-content">
+  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal cover-animate max-w-[100vw]">
+    <SideBar />
+    <div class="ml-28 pr-14 relative" id="main-content" ref="main">
       <NavBar />
       <section>
         <section class="mt-[101px] flex gap-6 relative">
@@ -59,26 +59,15 @@
   import SideBar from '@/components/SideBar.vue';
   import HorizontalSlider from "@/components/HorizontalSlider.vue"
 	import MusicSlider from "@/components/MusicSlider.vue"
-	import { onMounted } from "vue";
+	import { onMounted, ref } from "vue";
   import MusicPlayer from '@/components/MusicPlayer.vue';
-  // import CategoryList from '@/components/CategoryList.vue';
+  import { setWidth } from "@/main.js"
+
+  let main = ref(null)
 
 	onMounted(() => {
-			let main = document.getElementById("main-content")
-			let sidebar = document.getElementById("sidebar")
-			main.style.width = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
-			main.style.maxWidth = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
-
-      let playerHeight = document.getElementById("music-player").offsetHeight;
-      // console.log(playerHeight)
-      main.style.marginBottom = playerHeight/2 + "px"
+    setWidth(main)
 	})
-
-  // let show = ref(false)
-
-  // function showCategory() {
-  //   show = true
-  // }
 
   // Add arrows to your music sliders.
 </script>

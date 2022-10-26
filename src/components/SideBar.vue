@@ -18,50 +18,36 @@
     </div>
 </template>
 
-<script setup>
-    import { defineProps, onMounted } from "vue";
-
-    const props = defineProps({
-        active: String
-    })
-
-    onMounted(() => {
-        document.getElementById(props.active).classList.add("active-nav")
-    })
-
-    // let hovered = ref(false)
-</script>
-
 <style scoped>
-    .active-nav {
+    .router-link-active svg {
         filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
     }
 
-    .active-nav g {
+    .router-link-active svg g {
         opacity: 1;
     }
     
-    .active-nav path {
+    .router-link-active svg path {
         fill: #FACD66;
         fill-opacity: 1;
         box-shadow: 0px 0px 11px rgba(250, 205, 102, 1);
     }
 
-    .sidenav-item:not(.active-nav):hover g {
+    .sidenav-item:not(.router-link-active svg):hover g {
         opacity: 1;
     }
 
-    .sidenav-item:not(.active-nav) path {
+    .sidenav-item:not(.router-link-active svg) path {
         transition: all 0.3s ease-out;
     }
 
-    .sidenav-item:not(.active-nav):hover path {
+    .sidenav-item:not(.router-link-active svg):hover path {
         transition: all 0.2s ease-in;
         fill-opacity: 1;
         fill: #ffffff;
     }
 
-    .sidenav-item:not(.active-nav):hover {
+    .sidenav-item:not(.router-link-active svg):hover {
         transform: scale(1.09);
     }
 

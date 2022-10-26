@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal category-page">
-      <SideBar :active="'collections'" />
-      <div class="ml-32 w-full max-w-full pr-14 relative" id="main-content">
+    <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal w-full max-w-full category-page">
+      <SideBar />
+      <div class="ml-28 w-full max-w-full pr-14 relative" id="main-content">
         <NavBar />
         <section class="w-full">
           <section class="mt-[90px] flex gap-6 relative mb-12 w-full">

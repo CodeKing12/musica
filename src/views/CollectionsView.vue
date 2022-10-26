@@ -1,8 +1,8 @@
 <template>
     <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal">
-        <SideBar :active="'collections'" />
+        <SideBar />
         
-        <div class="ml-28 max-w-full pr-14 relative" id="main-content">
+        <div class="ml-28 max-w-full pr-14 relative" id="main-content" ref="main">
             <NavBar />
             <section class="mt-[90px] flex gap-8 relative mb-12 w-full flex-col">
                 <div class="flex text-[15px] gap-5 font-semibold items-center">
@@ -29,22 +29,18 @@
   
 <script setup>
     // @ is an alias to /src
-    // import { ref } from "vue";
+    import { ref } from "vue";
     import NavBar from '@/components/NavBar.vue';
     import SideBar from '@/components/SideBar.vue';
     import { onMounted } from "vue";
     import MusicPlayer from '@/components/MusicPlayer.vue';
     import CollectionCard from '@/components/CollectionCard.vue';
-    // import CategoryList from '@/components/CategoryList.vue';
+    import { setWidth } from '@/main.js';
+
+    let main = ref(null)
 
     onMounted(() => {
-        let main = document.getElementById("main-content")
-        let sidebar = document.getElementById("sidebar")
-        main.style.width = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
-        main.style.maxWidth = (document.body.offsetWidth - sidebar.offsetWidth-1) + "px"
-
-        let playerHeight = document.getElementById("music-player").offsetHeight;
-        main.style.marginBottom = playerHeight/2 + "px"
+        setWidth(main)
     })
 
 // let show = ref(false)
