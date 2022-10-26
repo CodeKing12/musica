@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal w-full max-w-full category-page absolute top-0 duration-1000 ease-in-out" :class="show ? 'show-trans' : 'remove-trans'" ref="page">
+    <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal w-full max-w-full category-page absolute top-0" :class="show ? 'show-trans' : 'remove-trans'" ref="page">
       <!-- !h-full z-[40] after:!h-0 after:!bottom-full !opacity-100 !visible h-0 after:h-full after:bottom-0 -->
       <div class="w-full max-w-full pr-14 relative" id="main-content" ref="main">
         <section class="w-full">
@@ -96,7 +96,7 @@
       bottom: 0;
       background-color: #1D2123;
       z-index: 40;
-      transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.3s;
+      transition: all cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
     }
 
     .show-trans {
@@ -105,14 +105,14 @@
     }
 
     .show-trans::after {
-      transition: height 1.5s 0.1s;
+      transition: height 1.1s 0.1s;
       height: 0 !important;
       bottom: 100% !important;
     }
 
     .remove-trans {
-      transition-duration: 0.4s !important;
-      transition-delay: 0.9s;
+      transition-duration: 0.3s !important;
+      transition-delay: 1s;
       visibility: hidden;
       opacity: 0;
     }
@@ -120,7 +120,7 @@
     .remove-trans::after {
       height: 100% !important;
       bottom: 0 !important;
-      transition-duration: 1s;
+      transition-duration: 1.2s;
     }
 
     /* .animate-show::after {
