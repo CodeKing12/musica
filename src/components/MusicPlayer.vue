@@ -66,6 +66,7 @@
     .player {
         background-color: rgba(16, 16, 16, 0.51);
 		backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
 		box-shadow: 0px -25px 100px rgba(16, 16, 16, 0.51);
 	}
 

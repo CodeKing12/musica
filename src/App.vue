@@ -19,6 +19,11 @@
     -moz-osx-font-smoothing: grayscale;
   } */
 
+  html {
+    scrollbar-color: #FACD66 #1A1E1F;
+    scrollbar-width: 7px;
+  }
+
   .cover-enter-from {
     opacity: 0;
   }
