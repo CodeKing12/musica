@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal cover-animate max-w-[100vw]">
+  <div class="bg-[#1D2123] text-white min-h-screen flex font-quicksand font-normal cover-animate">
     <SideBar />
-    <div class="ml-28 pr-14 relative" id="main-content" ref="main">
+    <div class="ml-28 pr-7 xl:pr-14 relative" id="main-content" ref="main">
       <NavBar />
       <section>
-        <section class="mt-[101px] flex gap-6 relative">
-          <div class="bg-[#609EAF] text-white w-4/6 rounded-[40px] flex justify-between relative overflow-hidden">
+        <section class="mt-[101px] flex flex-col lg:flex-row gap-6 relative w-full">
+          <div class="bg-[#609EAF] text-white lg:w-3/6 xl:w-4/6 rounded-[40px] flex justify-between relative overflow-hidden">
             <div class="py-10 px-10">
               <p class="mb-20 font-bold text-base">Curated Playlist</p>
               <h1 class="mb-[14px] font-bold text-5xl">
@@ -26,13 +26,14 @@
                 <p>33k Likes</p>
               </div>
             </div>
-            <div class="pr-1 bg-right-top bg-no-repeat relative wave-div z-30">
+            <div class="pr-1 bg-right-top bg-no-repeat relative wave-div z-30 lg:hidden xl:flex">
               <!-- bg-[url(@/assets/icons/bg-wave.svg)] -->
               <img class="h-full object-cover" src="@/assets/images/artist.png" />
             </div>
-            <img class="absolute right-0 top-0 h-full z-20" src="@/assets/icons/bg-wave.svg" />
+            <img class="absolute right-0 top-0 h-full z-20 block lg:hidden xl:block" src="@/assets/icons/bg-wave.svg" />
+            <img class="absolute right-0 top-0 h-full z-20 hidden lg:block xl:hidden" src="@/assets/icons/bg-wave-2.svg" />
           </div>
-          <div class="w-2/6">
+          <div class="lg:w-[45%] xl:w-2/6">
             <h2 class="font-bold text-2xl mb-[14px]">Top Charts</h2>
             <HorizontalSlider @show-category="showCategory()" />
           </div>
