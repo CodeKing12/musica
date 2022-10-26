@@ -45,6 +45,7 @@
           <h2 class="font-bold text-2xl mb-4">Popular in your Area</h2>
           <MusicSlider />
         </section>
+        <GroupMusic @go-back="showList = false" :show="showList" :playlist="list" />
         <!-- <CategoryList :show="show" /> -->
       </section>
     </div>
@@ -61,13 +62,21 @@
 	import MusicSlider from "@/components/MusicSlider.vue"
 	import { onMounted, ref } from "vue";
   import MusicPlayer from '@/components/MusicPlayer.vue';
+  import GroupMusic from '@/components/GroupMusic.vue';
   import { setWidth } from "@/main.js"
 
   let main = ref(null)
+  let showList = ref(false)
+  let list = ref("")
 
 	onMounted(() => {
     setWidth(main)
 	})
+
+  function showCategory() {
+    showList.value = !showList.value
+    list = "jnksdspokdsppdosdokp"
+  }
 
   // Add arrows to your music sliders.
 </script>

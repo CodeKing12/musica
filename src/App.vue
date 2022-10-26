@@ -58,8 +58,8 @@
   }
   
   .cover-right-enter::after {
-    animation: slideRight cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.5s;
-  } 
+    animation: slideRight cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.3s;
+  }
 
   .cover-down-enter::after {
     animation: slideDown cubic-bezier(0.785, 0.135, 0.15, 0.86) 1.7s;

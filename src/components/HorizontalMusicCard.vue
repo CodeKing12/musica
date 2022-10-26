@@ -1,10 +1,10 @@
 <template>
     <div class="bg-brand-black rounded-[20px] pl-[18px] pr-[22px] py-[18px] flex justify-between items-center">
         <div class="flex gap-[14px]">
-            <router-link to="/genres"><img class="cursor-pointer rounded-[10px] w-[70px] h-[70px]" src="@/assets/images/music-1.svg" @click="displayCategory()"/></router-link>
+            <img class="cursor-pointer rounded-[10px] w-[70px] h-[70px]" src="@/assets/images/music-1.svg" @click="displayCategory()"/>
             <div class="leading-none">
-                <router-link to="/genres"><a class="cursor-pointer block text-base font-semibold leading-none mb-[5px]">Golden age of 80s</a></router-link>
-                <router-link to="/genres"><a class="cursor-pointer block text-sm text-white font-medium text-opacity-50 mb-2">Sean Swadder</a></router-link>
+                <a class="cursor-pointer block text-base font-semibold leading-none mb-[5px]">Golden age of 80s</a>
+                <a class="cursor-pointer block text-sm text-white font-medium text-opacity-50 mb-2">Sean Swadder</a>
                 <p class="block text-sm font-medium">2:34:45</p>
             </div>
         </div>

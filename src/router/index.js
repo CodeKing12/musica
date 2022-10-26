@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import ChartView from '../views/ChartView.vue'
+// import ChartView from '../views/GroupMusic.vue'
 import CollectionsView from '../views/CollectionsView.vue'
 
 const routes = [
@@ -13,15 +13,15 @@ const routes = [
       leaveClass: "cover-right-leave"
     }
   },
-  {
-    path: '/genres',
-    name: 'genres',
-    component: ChartView,
-    meta: {
-      enterClass: "cover-up-enter",
-      leaveClass: "cover-up-leave"
-    }
-  },
+  // {
+  //   path: '/genres',
+  //   name: 'genres',
+  //   component: ChartView,
+  //   meta: {
+  //     enterClass: "cover-up-enter",
+  //     leaveClass: "cover-up-leave"
+  //   }
+  // },
   {
     path: '/collections',
     name: 'collections',
